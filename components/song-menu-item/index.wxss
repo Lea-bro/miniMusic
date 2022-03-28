@@ -1,0 +1,35 @@
+/* components/song-menu-item/index.wxss */
+.item .top{
+  position: relative;
+}
+.item .top .text{
+  position:absolute;
+  right: 0;
+  bottom: 10rpx;
+  font-size: 22rpx;
+  color: #fff;
+  padding: 6rpx 10rpx;
+  border-radius: 15rpx;
+  background-color:rgba(0, 0,0, .5);
+}
+
+.item .image{
+  width: 100%;
+  border-radius: 15rpx;
+  background-size: cover;
+}
+
+.item .bottom{
+  width: 100%;
+  font-size: 26rpx;
+
+  /* 显示两行 */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:2 ;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space:normal;
+  overflow: hidden;
+}

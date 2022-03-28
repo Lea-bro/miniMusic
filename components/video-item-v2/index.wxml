@@ -1,0 +1,15 @@
+<!--components/video-item-v2/index.wxml-->
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<view class="item">
+  <view class="top">
+    <image class="image" src="{{item.coverUrl}}" mode="widthFix"></image>
+    <view class="duration">
+      <image class="icon" src="/assets/images/icons/play_icon.png"></image>
+      <text>{{format.formatDuration(item.durationms)}}</text>
+    </view>
+  </view>
+  <view class="info">
+    <view class="title">{{item.title}}</view>
+    <view class="authName">{{item.creator[0].userName}}</view>
+  </view>
+</view>

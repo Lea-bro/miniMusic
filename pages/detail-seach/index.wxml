@@ -1,0 +1,51 @@
+<!--pages/detail-seach/index.wxml-->
+<van-search
+  class="search"
+  focus
+  shape="round"
+  show-action="{{searchValue}}"
+  value="{{searchValue}}"
+  background="#fafafa"
+  placeholder="搜索您喜欢的歌曲"
+  bind:change="handleInput"
+  bind:search="handleSearchClick"
+/>
+
+<view wx:if="{{showSearchRes}}">
+  <!-- 热门搜索 -->
+  <view wx:if="{{searchValue.length === 0}}">
+    <aera-header title="热门搜索" showRight="{{false}}"></aera-header>
+    <view class="hots">
+      <block wx:for="{{hots}}" wx:key="id">
+        <view class="hots-item" 
+              bindtap="handleSearchClick"
+              data-value="{{item.first}}">{{item.first}}</view>
+      </block>
+    </view>
+  </view>
+
+<!-- 建议检索 -->
+  <view class="suggest" wx:else>
+    <view class="title">搜索"{{searchValue}}"</view>
+    <view class="content">
+      <block wx:for="{{suggestSongsNodes}}" wx:key="id">
+        <view class="content-item" 
+              bindtap="handleSearchClick"
+              data-value="{{item[0].children[0].text}}">
+          <image class="icon" src="/assets/images/icons/search_icon.png"></image>
+          <rich-text nodes="{{item}}"></rich-text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 搜索的结果 -->
+<view wx:else>
+  <view class="title">最佳结果</view>
+  <view>
+    <block wx:for="{{resultSearchSong}}" wx:key="id">
+      <song-item-v2 item="{{item}}" index="{{index}}"></song-item-v2>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,71 @@
+<!--pages/music-player/index.wxml-->
+<wxs src="/utils/format.wxs" module="format"></wxs>
+
+<!-- 背景图片，毛玻璃 -->
+<image class="bg-image" src="{{pageData.al.picUrl}}" mode="aspectFill"></image>
+<view class="bg-glass"></view>
+
+<!-- 自定义导航栏 -->
+<nav-bar>
+  <view slot="center" class="tab">
+    <view style="color: {{tabStyleColor ? '#999' : '#fff'}};">歌曲</view>
+    <view class="divider">|</view>
+    <view style="color: {{tabStyleColor ? '#fff' : '#999'}};">歌词</view>
+  </view>
+</nav-bar>
+
+<!-- 内容 -->
+<swiper class="content" 
+        style="height:{{contentHeight}}px"
+        bindchange="handleCurrentChange">
+  <swiper-item class="music">
+    <view class="album">
+      <image class="album-image" src="{{pageData.al.picUrl}}" mode="widthFix"></image>
+    </view>
+    <view class="info">
+      <view class="title">{{pageData.name}}</view>
+      <view class="detail">
+        <view class="detail-text">{{pageData.ar[0].name}}</view>
+        <view class="detail-text" wx:if="{{pageData.alia[0]}}">专辑:{{pageData.alia[0]}}</view>
+        <view class="detail-text" wx:else>专辑:{{pageData.al.name}}</view>
+      </view>
+    </view>
+    <view class="lyric">{{currentLyric}}</view>
+    <view class="progress">
+      <slider class="slider"
+              block-size="{{12}}"
+              value="{{currentValue}}"
+              bindchange="handleDragClick"
+              bindchanging="handleDragChangingClick"></slider>
+      <view class="time">
+        <view class="current">{{format.formatDuration(currentTime)}}</view>
+        <view class="duration">{{format.formatDuration(duration)}}</view>
+      </view>
+    </view>
+    <view class="operation">
+      <image class="btn btn-mode" 
+             src="/assets/images/player/play_{{playModeName}}.png"
+             bindtap="handlePlayModeIndexClick"></image>
+      <image class="btn btn-prev" 
+             src="/assets/images/player/play_prev.png"
+             bindtap="handlePrevMusicClick"></image>
+      <image class="btn btn-pause" src="/assets/images/player/play_{{PauseOrPlayImage}}.png"
+             bindtap="handlePauseClick"></image>
+      <image class="btn btn-next" 
+             src="/assets/images/player/play_next.png"
+             bindtap="handleNextMusicClick"></image>
+      <image class="btn btn-music" src="/assets/images/player/play_music.png"></image>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scroll-view" 
+                 scroll-y 
+                 scroll-top="{{scrollBar}}"
+                 scroll-with-animation>
+      <block wx:for="{{lyricInfo}}" wx:key="index">
+        <view class="item {{currentIndex === index ? 'active' : ''}}"
+              style="padding-top: {{index === 0 ? (contentHeight/2-75) :0}}px;padding-bottom: {{index === (lyricInfo.length - 1) ? (contentHeight/2+60) : 0}}px;">{{item.text}}</view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>

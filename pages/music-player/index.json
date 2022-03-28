@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "nav-bar":"/baseui/bav-bar/index"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "componentPlaceholder": {
+    "nav-bar": "view"
+  }
+}

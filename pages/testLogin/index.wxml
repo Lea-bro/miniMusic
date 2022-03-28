@@ -1,0 +1,3 @@
+<!--pages/testLogin/index.wxml-->
+<button bindtap="handleLoginClick">登录</button>
+<button bindtap="handleLoginClick2">登录</button>

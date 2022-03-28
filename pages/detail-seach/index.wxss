@@ -1,0 +1,53 @@
+/* pages/detail-seach/index.wxss */
+page{
+  padding: 0 20rpx;
+  padding-top: 56px;
+}
+
+.search{
+  position: fixed;
+  top: 0;
+  left: 20rpx;
+  right: 20rpx;
+}
+
+
+.hots{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hots-item{
+  font-size: 26rpx;
+  white-space: nowrap;
+  margin: 10rpx 20rpx 10rpx 0;
+  padding: 10rpx 12rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
+.hots-item:first-of-type{
+  color: #26ce8a;
+}
+
+/* 建议搜索 */
+.suggest{
+  width: 100%;
+}
+.title{
+  font-size: 34rpx;
+  color: #26ce8a;
+  font-weight: 700;
+}
+.suggest .content-item{
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  
+  /* transform: translateX(-20rpx); */
+}
+
+.suggest .content-item .icon{
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: -20rpx;
+}

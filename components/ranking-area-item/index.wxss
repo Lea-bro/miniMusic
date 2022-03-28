@@ -1,0 +1,56 @@
+/* components/ranking-area-item/index.wxss */
+.item{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12rpx;
+  background-color: #eee;
+  overflow: hidden;
+  margin: 0 0 20rpx 0;
+  
+}
+.item .content{
+  padding: 24rpx;
+  width: 60%;
+}
+.item .content .text{
+  font-size: 34rpx;
+  font-weight: 500;
+  color: #000000;
+}
+.item .content-list{
+  font-size: 24rpx;
+  
+  display: flex;
+  flex-direction: column;
+}
+.item .content-list .content-list-view{
+  margin-top: 8rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.item .singer{
+  color: #999;
+}
+
+.item .image{
+  width: 220rpx;
+  height: 220rpx;
+}
+
+.item .right{
+  position: relative;
+  height: 220rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+.item .play-count{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 22rpx;
+  color: rgb(238, 238, 238);
+  border-radius: 12rpx;
+  padding: 6rpx 10rpx;
+  background-color: rgba(0, 0, 0, .5);
+}

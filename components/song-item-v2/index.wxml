@@ -1,0 +1,16 @@
+<!--components/song-item-v2/index.wxml-->
+<view class="item" bindtap="handlSongPlayerClick" data-id="{{item.id}}">
+  <view class="leftNumber">{{index + 1}}</view>
+  <view class="info">
+    <view class="title">{{item.name}}</view>
+    <view class="content">
+      <image class="image" src="/assets/images/icons/sq_icon.png"></image>
+      <text wx:if="{{item.ar[0].name}}">{{item.ar[0].name}}</text>
+      <text wx:elif="{{item.artists[0].name}}">{{item.artists[0].name}}</text>
+      <text class="dots" wx:if="{{item.alia[0]}}" >·</text>
+      <text wx:if="{{item.alia[0]}}">{{item.alia[0]}}</text>
+      <text class="dots" wx:if="{{item.alias[0]}}" >·</text>
+      <text wx:if="{{item.alias[0]}}">{{item.alias[0]}}</text>
+    </view>
+  </view>
+</view>

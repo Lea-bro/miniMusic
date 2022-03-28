@@ -1,0 +1,35 @@
+/* pages/detail-video/index.wxss */
+page{
+  padding-top: 225px;
+}
+.video{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+}
+
+.content{
+  padding: 0 20rpx;
+}
+
+
+.content .top{
+  margin: 40rpx 0;
+}
+
+.content .top .title{
+  font-weight: 700;
+  font-size: 40rpx;
+}
+.content .top .authName, .playCount{
+  font-size: 27rpx;
+  color:#666;
+  margin: 14rpx 0;
+}
+/* 推荐视频 */
+.content .bottom .title{
+  font-size: 35rpx;
+  font-weight: 600;
+}
+

@@ -1,0 +1,77 @@
+/* pages/home-music/index.wxss */
+page{
+  padding:0 20rpx;
+}
+.placeholder{
+  height: 44px;
+}
+
+.swiper{
+  border-radius:10rpx;
+  overflow: hidden;
+  transform: translateY(0);
+}
+
+.swiper-image{
+  width: 100%;
+}
+
+/* 工具栏 */
+.toolBar{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 44px;
+  background-color: #fafafa;
+  padding: 0 8px;
+
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+
+  box-shadow: 0 -1px 5px rgba(0,0,0,.1);
+}
+.toolBar .left {
+  display: flex;
+  align-items: center;
+}
+.toolBar .left .image{
+  position: relative;
+  top: -8px;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  margin-left: 20px;
+  /* overflow: hidden; */
+}
+
+.toolBar .left .text{
+  font-size: 14px;
+  margin-left: 10px;
+}
+.toolBar .right{
+  display: flex;
+  align-items: center;
+}
+.toolBar .right .icon{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.toolBar .right .pause, .toolBar .right .play{
+  width: 25px;
+  height:25px;
+}
+
+/* 动画 */
+@keyframes imageRotate{
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+.toolBar .left .image-anim{
+  animation: imageRotate 16s;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+}

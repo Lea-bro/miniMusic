@@ -1,0 +1,44 @@
+/* components/song-item-v2/index.wxss */
+.item{
+  display: flex;
+  align-items: center;
+  margin: 36rpx 0 10rpx;
+}
+
+.leftNumber{
+  font-size: 30rpx;
+  padding: 12rpx;
+}
+.info{
+  flex: 1;
+  margin-left: 16rpx;
+}
+
+.item .content{
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+.title{
+  font-size: 30rpx;
+}
+
+.item .image{
+  width: 38rpx;
+  height: 22rpx;
+  margin-right: 10rpx;
+}
+.dots{
+  padding: 0 8rpx;
+}
+/* .item .info{
+  color: red;
+  width: 80%;
+  
+  padding-right: 20rpx;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+} */

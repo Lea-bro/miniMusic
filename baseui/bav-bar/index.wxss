@@ -1,0 +1,36 @@
+/* baseui/bav-bar/index.wxss */
+
+.nav-bar{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: aliceblue;
+}
+.left, .right{
+  width: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-slot:empty + .icon{
+  display: block;
+}
+.left .icon{
+  display: none;
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.center-slot:empty + .center{
+  display: block;
+}
+.center .title{
+  display: none;
+}

@@ -1,0 +1,13 @@
+<!--components/song-item-v1/index.wxml-->
+<view class="item" 
+  bindtap="handlSongPlayerClick"
+  data-id="{{item.id}}">
+  <image class="image" src="{{item.al.picUrl}}" mode="widthFix"></image>
+  <view class="content">
+    <view class="text">
+      <text class="text1">{{item.name}}</text>
+      <text class="text2">{{item.ar[0].name}} · {{item.name}}</text>
+    </view>
+    <image class="image" src="../../assets/images/icons/arrow-right.png" alt=""/>
+  </view>
+</view>

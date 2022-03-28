@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "aera-header":"/components/area-header/index",
+    "song-item-v2":"/components/song-item-v2/index"
+  },
+  "componentPlaceholder": {
+    "van-search": "view",
+    "aera-header": "view",
+    "song-item-v2": "view"
+  }
+}

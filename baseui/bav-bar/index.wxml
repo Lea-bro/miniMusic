@@ -1,0 +1,18 @@
+<!--baseui/bav-bar/index.wxml-->
+<view class="nav">
+  <view class="status" style="height: {{statusBarHeight}}px;"></view>
+  <view class="nav-bar" style="height:{{NavBarHeight}}px">
+    <view class="left" bindtap="handleBackPageClick">
+        <view class="left-slot"><slot name="left"></slot></view>
+        <image class="icon" src="/assets/images/icons/arrow-left.png" mode="widthFix"></image>
+    </view>
+    <view class="center">
+      <view class="center-slot"><slot name="center"></slot></view>
+      <view class="title">{{title}}</view>
+    </view>
+    <view class="right"></view>
+  </view>
+</view>
+
+
+

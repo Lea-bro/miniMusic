@@ -1,0 +1,11 @@
+page{
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+.van-search__content{
+  background-color: #fff !important;
+}
+.van-search{
+  padding-left:0rpx !important;
+  padding-left:0rpx !important;
+}
